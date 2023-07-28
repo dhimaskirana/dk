@@ -14,3 +14,8 @@ DK Themes WordPress is clean and very simple. This theme uses a responsive desig
 2. Go to "Appearance" -> "Theme" and click on "Add New" button.
 3. Search for "dk".
 4. Click on Install and Activate.
+
+## Screenshot
+
+![DK WordPress Themes](https://raw.githubusercontent.com/dhimaskirana/dk/main/screenshot.png "DK WordPress Themes")
+_DK WordPress Themes_
