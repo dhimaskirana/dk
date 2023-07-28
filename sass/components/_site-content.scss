@@ -1,0 +1,162 @@
+.site-content {
+	margin: 2em auto;
+
+	.sticky {
+		border: solid 1em $color_1;
+		background-color: $color_5 !important;
+	}
+
+	.no-results,
+	.not-found {
+		text-align: center;
+
+		.entry-header {
+			padding-top: 0 !important;
+		}
+	}
+
+	.cat-links {
+		margin-top: 2em;
+		padding: 0 2em;
+		display: flex;
+		gap: .5em;
+		align-items: center;
+
+		a {
+			font-size: .85em;
+		}
+	}
+
+	.page-header {
+		.page-title {
+			margin: 0;
+			font-size: 1.6em;
+		}
+
+		.archive-description {
+			font-style: italic;
+			padding-top: .5em;
+
+			p {
+				margin: 0;
+			}
+		}
+	}
+
+
+	.widget,
+	.not-found,
+	.page-header,
+	.comments-area {
+		padding: 2em;
+	}
+
+	.hentry,
+	.widget,
+	.not-found,
+	.page-header,
+	.comments-area {
+		background-color: #fff;
+		-ms-word-wrap: break-word;
+		word-wrap: break-word;
+		overflow: auto;
+		-webkit-box-shadow: $shadow;
+		-moz-box-shadow: $shadow;
+		box-shadow: $shadow;
+		margin-bottom: 2em;
+
+		.entry-header {
+			padding: 1.5em 2em 0;
+
+			.breadcrumbs {
+				font-size: .85em;
+				padding-bottom: 1em;
+			}
+
+			.entry-title {
+				margin: 0;
+				font-size: 1.6em;
+			}
+
+			.entry-meta {
+				font-size: .85em;
+				padding: .3em 0;
+
+				a {
+					text-decoration: none;
+				}
+
+				a:hover {
+					border-bottom: solid 1px;
+				}
+
+				.updated {
+					display: none;
+				}
+			}
+		}
+
+		.entry-content {
+			padding: 0 2em;
+			overflow: auto;
+		}
+
+		.entry-footer {
+			padding: 0 2em;
+			margin-bottom: 2em;
+			display: flex;
+			justify-content: flex-end;
+			align-items: center;
+			gap: .5em;
+
+			a {
+				font-size: .85em;
+			}
+
+			.tags-links {
+				flex: 1;
+				display: flex;
+				flex-wrap: wrap;
+				align-items: center;
+				gap: .5em;
+			}
+
+			.comments-link,
+			.edit-link {
+				display: flex;
+				align-items: center;
+				gap: 0.5em;
+				padding: 0.5em 1em;
+				background-color: $color_5;
+				color: $color_1;
+				border-radius: 50px;
+
+				a {
+					text-decoration: none;
+				}
+
+				&:hover {
+					background-color: $color_1;
+					color: $color_5;
+
+					a {
+						color: $color_5;
+					}
+				}
+			}
+		}
+
+	}
+
+}
+
+@media screen and (max-width: $small_screen) {
+	.site-content {
+		.hentry {
+			.entry-footer {
+				flex-direction: column;
+				align-items: start;
+			}
+		}
+	}
+}

@@ -1,0 +1,26 @@
+.site-header {
+	background-color: #fff;
+	-webkit-box-shadow: $shadow;
+	-moz-box-shadow: $shadow;
+	box-shadow: $shadow;
+
+	.site-branding {
+		padding: 1em 20px;
+
+		.site-title {
+			font-size: 1.8em;
+			margin: 0;
+			font-weight: bold;
+
+			a {
+				text-decoration: none;
+			}
+		}
+
+		.site-description {
+			margin: 0 0 .5em;
+			font-style: italic;
+		}
+
+	}
+}

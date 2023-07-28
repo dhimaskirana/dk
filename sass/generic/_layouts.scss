@@ -1,0 +1,27 @@
+.site-branding, .site-content, .site-info, .main-navigation {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.site-content {
+    display: flex;
+    gap: 2em;
+    flex-direction: column;
+
+    #content {
+        flex: 6;
+        min-width: 0;
+    }
+
+    #sidebar {
+        flex: 3;
+        min-width: 0;
+    }
+}
+
+@media screen and (min-width: 37.5em) {
+    .site-content {
+        flex-direction: row;
+    }
+}
