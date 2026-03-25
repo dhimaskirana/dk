@@ -1,3 +1,5 @@
+@use "colors";
+
 button, input, select, textarea {
 	font-size: 100%;
 	/* Corrects font size not being inherited in all browsers */
@@ -10,7 +12,7 @@ button, input, select, textarea {
 
 button, input[type="button"], input[type="reset"], input[type="submit"] {
 	/* default button color */
-	background-color: $color_1;
+	background-color: colors.$color_1;
 	/* default box shadow */
 	/* default border radius */
 	cursor: pointer;
@@ -21,14 +23,16 @@ button, input[type="button"], input[type="reset"], input[type="submit"] {
 	padding: .75em;
 	color: #fff;
 	border: none;
+	border-radius: 5px;
+	transition: all 0.3s ease;
 }
 
 button:hover, input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover {
-	background-color: $color_2;
+	background-color: colors.$color_2;
 }
 
 button:focus, input[type="button"]:focus, input[type="reset"]:focus, input[type="submit"]:focus, button:active, input[type="button"]:active, input[type="reset"]:active, input[type="submit"]:active {
-	background-color: $color_2;
+	background-color: colors.$color_2;
 }
 
 input[type="checkbox"], input[type="radio"] {
@@ -54,10 +58,12 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 input[type="text"], input[type="email"], input[type="url"], input[type="password"], input[type="search"], textarea {
 	color: #666;
 	border: 1px solid #ccc;
+	border-radius: 5px;
 }
 
 input[type="text"]:focus, input[type="email"]:focus, input[type="url"]:focus, input[type="password"]:focus, input[type="search"]:focus, textarea:focus {
 	color: #111;
+	border: 1px solid colors.$color_2;
 }
 
 input[type="text"], input[type="email"], input[type="url"], input[type="password"], input[type="search"] {

@@ -1,10 +1,13 @@
+@use "../generic/colors";
+
 .no-comments {
 	font-size: 2em;
 	margin: 0;
 	padding: .5em;
 	text-align: center;
-	border-top: solid 2px;
-	border-bottom: solid 2px;
+	background-color: colors.$color_3;
+	color: colors.$color_5;
+	border-radius: 5px;
 }
 
 .comments-area {
@@ -26,8 +29,8 @@
 			content: 'author';
 			font-size: 0.7em;
 			padding: 0.5em 1em;
-			background-color: $color_1;
-			color: $color_5;
+			background-color: colors.$color_1;
+			color: colors.$color_5;
 			margin-left: .75em;
 			border-radius: 50px;
 		}
@@ -118,12 +121,30 @@
 
 		.comment-form {
 
+			label {
+				margin-bottom: .5em;
+			}
+
 			.required {
 				color: #e74c3c;
 			}
 
 			.comment-notes {
 				font-style: italic;
+			}
+
+			.comment-form-comment, .comment-form-url {
+				clear: both;
+			}
+
+			.comment-form-author {
+				float: left;
+				width: 48%;
+			}
+
+			.comment-form-email {
+				float: right;
+				width: 48%;
 			}
 
 			#author,

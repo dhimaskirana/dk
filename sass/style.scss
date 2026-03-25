@@ -15,57 +15,51 @@
 11 - Media
 --------------------------------------------------------------*/
 
-/*--------------------------------------------------------------
-Root Style
---------------------------------------------------------------*/
-@import "generic/variables";
-@import "generic/colors";
-
 /* 1 - Normalize
 --------------------------------------------------------------*/
-@import "generic/normalize";
-@import "generic/box-sizing";
+@use "generic/normalize";
+@use "generic/box-sizing";
 
 /* 2 - Layouts
 --------------------------------------------------------------*/
-@import "generic/layouts";
+@use "generic/layouts";
 
 /* 3 - Typography
 --------------------------------------------------------------*/
-@import "generic/typography";
+@use "generic/typography";
 
 /* 4 - Elements
 --------------------------------------------------------------*/
-@import "generic/elements";
+@use "generic/elements";
 
 /* 5 - Forms
 --------------------------------------------------------------*/
-@import "generic/forms";
+@use "generic/forms";
 
 /* 6 - Navigation
 --------------------------------------------------------------*/
-@import "components/main-navigation";
-@import "components/post-navigation";
+@use "components/main-navigation";
+@use "components/post-navigation";
 
 /* 7 - Accessibility
 --------------------------------------------------------------*/
-@import "generic/accessibility";
+@use "generic/accessibility";
 
 /* 8 - Alignments
 --------------------------------------------------------------*/
-@import "generic/alignments";
+@use "generic/alignments";
 
 /* 9 - Widgets
 --------------------------------------------------------------*/
-@import "generic/widgets";
+@use "generic/widgets";
 
 /* 10 - Global Site Style
 --------------------------------------------------------------*/
-@import "components/site-header";
-@import "components/site-content";
-@import "components/comments";
-@import "components/site-footer";
+@use "components/site-header";
+@use "components/site-content";
+@use "components/comments";
+@use "components/site-footer";
 
 /* 11 - Media
 --------------------------------------------------------------*/
-@import "generic/media";
+@use "generic/media";

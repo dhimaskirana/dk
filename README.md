@@ -1,6 +1,6 @@
 # DK WordPress Themes
 
-DK Themes WordPress is clean and very simple. This theme uses a responsive design and looks great on any device. Suitable for you who want to focus on the content. I hope you will enjoy this theme.
+DK Themes is a clean and simple WordPress theme built with a mobile-first approach. This theme uses a responsive design and looks great on any device. Suitable for you who want to focus on the content. I hope you will enjoy this theme.
 
 ## Installation
 

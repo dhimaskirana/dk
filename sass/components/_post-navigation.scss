@@ -1,55 +1,75 @@
+@use "../generic/colors";
+@use "../generic/variables";
+
 .nav-links {
-	display: flex;
-	justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
 
-	a {
-		text-decoration: none;
-	}
+    a {
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+    }
 
-	.nav-previous {
-		flex: 1 0 50%;
-	}
+    .nav-previous {
+        flex: 1 0 50%;
+        a:before {
+            font-family: "Dashicons";
+            content: "\f340";
+            padding-right: 5px;
+        }
+    }
 
-	.nav-next {
-		text-align: end;
-		flex: 1 0 50%;
-	}
+    .nav-next {
+        text-align: end;
+        flex: 1 0 50%;
+        a {
+            justify-content: end;
+            &:after {
+                font-family: "Dashicons";
+                content: "\f344";
+                padding-left: 5px;
+            }
+        }
+    }
 
-	.nav-subtitle {
-		display: block;
-		font-weight: bold;
-		font-size: .85em;
-		color: $color_1;
-	}
-
-}
-
-@media screen and (max-width: $small_screen) {
-	.nav-links {
-		padding: 0 20px;
-	}
+    .nav-subtitle {
+        display: block;
+        font-weight: bold;
+        font-size: 0.85em;
+        color: colors.$color_1;
+    }
 }
 
 .post-navigation {
-	margin: 0 0 1.5em;
+    margin: 0 0 1.5em;
 }
 
 .page-links {
-	display: flex;
-	align-items: center;
-	gap: .5em;
-	padding: 1em 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    padding: 1em 0;
+    justify-content: center;
 
-	.post-page-numbers {
-		background-color: $color_5;
-		color: $color_1;
-		cursor: pointer;
-		padding: .5em 1em;
-		text-decoration: none;
+    .post-page-numbers {
+        background-color: colors.$color_5;
+        color: colors.$color_1;
+        cursor: pointer;
+        padding: 0.5em 1em;
+        text-decoration: none;
+        border-radius: 5px;
 
-		&:hover {
-			color: $color_5;
-			background-color: $color_1;
-		}
-	}
+        &:hover {
+            color: colors.$color_5;
+            background-color: colors.$color_1;
+        }
+    }
+}
+
+.nav-links,
+.page-links,
+.post-navigation {
+    clear: both;
+    word-break: break-word;
 }

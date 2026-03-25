@@ -1,11 +1,14 @@
+@use "colors";
+@use "variables";
+
 body,
 button,
 input,
 select,
 optgroup,
 textarea {
-    color: $color_1;
-    font-family: $font;
+    color: colors.$color_1;
+    font-family: variables.$font;
     font-size: 1rem;
     line-height: 1.5;
 }
@@ -16,7 +19,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: $font;
+    font-family: variables.$font;
     font-weight: 700;
     clear: both;
 }
@@ -94,13 +97,13 @@ var {
 
 abbr,
 acronym {
-    border-bottom: 1px dotted $color_2;
+    border-bottom: 1px dotted colors.$color_2;
     cursor: help;
 }
 
 mark,
 ins {
-    background: $color_4;
+    background: colors.$color_4;
     text-decoration: none;
 }
 

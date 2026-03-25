@@ -10,11 +10,11 @@ Stable tag: 1.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
 
-DK WordPress Theme, (C) 2013 - 2023 Dhimas Kirana - https://www.dhimaskirana.com/
+DK WordPress Theme, (C) 2013 - 2026 Dhimas Kirana - https://www.dhimaskirana.com/
 
 == Description ==
 
-DK Themes WordPress is clean and very simple. This theme uses a responsive design and looks great on any device. Suitable for you who want to focus on the content. I hope you will enjoy this theme.
+DK Themes is a clean and simple WordPress theme built with a mobile-first approach. This theme uses a responsive design and looks great on any device. Suitable for you who want to focus on the content. I hope you will enjoy this theme.
 
 == Features ==
 * Simple and clean
@@ -39,7 +39,13 @@ Alternatively,
 
 == Changelog ==
 
-1.0 (2023)
+1.1 (March 25, 2026)
+- Change the container to 900px to make the content more focused
+- Fixed post thumbnails
+- Make the navigation menu cleaner
+- Fixed some styles
+
+1.0 (July 28, 2023)
 - Change font awesome icon to svg icon
 - Using font system
 - re-structure theme

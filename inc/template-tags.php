@@ -118,21 +118,6 @@ if (!function_exists('dk_posted_by')) :
 	}
 endif;
 
-if (!function_exists('dk_post_category')) :
-	/**
-	 * Prints HTML with meta information for the categories
-	 */
-	function dk_post_category() {
-		/* translators: used between list items, there is a space after the comma */
-		$categories_list = get_the_category_list(esc_html__(' ', 'dk'));
-		if ($categories_list) {
-			/* translators: 1: list of categories. */
-			$category_icon = '<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M.54 3.87.5 3a2 2 0 0 1 2-2h3.672a2 2 0 0 1 1.414.586l.828.828A2 2 0 0 0 9.828 3h3.982a2 2 0 0 1 1.992 2.181l-.637 7A2 2 0 0 1 13.174 14H2.826a2 2 0 0 1-1.991-1.819l-.637-7a1.99 1.99 0 0 1 .342-1.31zM2.19 4a1 1 0 0 0-.996 1.09l.637 7a1 1 0 0 0 .995.91h10.348a1 1 0 0 0 .995-.91l.637-7A1 1 0 0 0 13.81 4H2.19zm4.69-1.707A1 1 0 0 0 6.172 2H2.5a1 1 0 0 0-1 .981l.006.139C1.72 3.042 1.95 3 2.19 3h5.396l-.707-.707z"/></svg>';
-			printf('<span class="cat-links">' . $category_icon . ' ' . esc_html__('%1$s', 'dk') . '</span>', $categories_list); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-		}
-	}
-endif;
-
 if (!function_exists('dk_entry_footer')) :
 	/**
 	 * Prints HTML with meta information for the categories, tags and comments.
@@ -141,7 +126,14 @@ if (!function_exists('dk_entry_footer')) :
 		// Hide category and tag text for pages.
 		if ('post' === get_post_type()) {
 			/* translators: used between list items, there is a space after the comma */
-			$tags_list = get_the_tag_list('', esc_html_x(' ', 'list item separator', 'dk'));
+			$categories_list = get_the_category_list(esc_html__(',', 'dk'));
+			if ($categories_list) {
+				/* translators: 1: list of categories. */
+				$category_icon = '<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M.54 3.87.5 3a2 2 0 0 1 2-2h3.672a2 2 0 0 1 1.414.586l.828.828A2 2 0 0 0 9.828 3h3.982a2 2 0 0 1 1.992 2.181l-.637 7A2 2 0 0 1 13.174 14H2.826a2 2 0 0 1-1.991-1.819l-.637-7a1.99 1.99 0 0 1 .342-1.31zM2.19 4a1 1 0 0 0-.996 1.09l.637 7a1 1 0 0 0 .995.91h10.348a1 1 0 0 0 .995-.91l.637-7A1 1 0 0 0 13.81 4H2.19zm4.69-1.707A1 1 0 0 0 6.172 2H2.5a1 1 0 0 0-1 .981l.006.139C1.72 3.042 1.95 3 2.19 3h5.396l-.707-.707z"/></svg>';
+				printf('<span class="cat-links">' . $category_icon . ' ' . esc_html__('%1$s', 'dk') . '</span>', $categories_list); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+			}
+			/* translators: used between list items, there is a space after the comma */
+			$tags_list = get_the_tag_list('', esc_html_x(',', 'list item separator', 'dk'));
 			if ($tags_list) {
 				/* translators: 1: list of tags. */
 				$tag_icon = '<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-tag" viewBox="0 0 16 16"><path d="M6 4.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm-1 0a.5.5 0 1 0-1 0 .5.5 0 0 0 1 0z"/><path d="M2 1h4.586a1 1 0 0 1 .707.293l7 7a1 1 0 0 1 0 1.414l-4.586 4.586a1 1 0 0 1-1.414 0l-7-7A1 1 0 0 1 1 6.586V2a1 1 0 0 1 1-1zm0 5.586 7 7L13.586 9l-7-7H2v4.586z"/></svg>';

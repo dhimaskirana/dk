@@ -1,26 +1,58 @@
+@use "../generic/variables";
+
 .site-header {
-	background-color: #fff;
-	-webkit-box-shadow: $shadow;
-	-moz-box-shadow: $shadow;
-	box-shadow: $shadow;
+    background-color: #fff;
+    -webkit-box-shadow: variables.$shadow;
+    -moz-box-shadow: variables.$shadow;
+    box-shadow: variables.$shadow;
+    padding: 20px 0;
 
-	.site-branding {
-		padding: 1em 20px;
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
 
-		.site-title {
-			font-size: 1.8em;
-			margin: 0;
-			font-weight: bold;
+        .site-branding {
+            flex: 0 0 auto;
+            .site-title {
+                font-size: 1.8em;
+                margin: 0;
+                font-weight: bold;
 
-			a {
-				text-decoration: none;
-			}
-		}
+                a {
+                    text-decoration: none;
+                }
+            }
 
-		.site-description {
-			margin: 0 0 .5em;
-			font-style: italic;
-		}
+            .site-description {
+                margin: 0 0 0.5em;
+                font-style: italic;
+            }
+        }
 
-	}
+        .main-navigation {
+            flex: 0 0 100%;
+            padding: 0;
+
+            .toggled {
+                display: block;
+                margin-top: 15px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: variables.$small_screen) {
+    .site-header {
+        .container {
+            flex-wrap: nowrap;
+
+            .main-navigation {
+                display: block;
+                flex: 1;
+                text-align: right;
+            }
+        }
+    }
 }

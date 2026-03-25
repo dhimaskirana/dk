@@ -1,162 +1,183 @@
+@use "../generic/colors";
+@use "../generic/variables";
+
 .site-content {
-	margin: 2em auto;
+    margin: 2em auto;
 
-	.sticky {
-		border: solid 1em $color_1;
-		background-color: $color_5 !important;
-	}
+    .post-thumbnail {
+        img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+    }
 
-	.no-results,
-	.not-found {
-		text-align: center;
+    .sticky {
+        border: solid 1em colors.$color_1;
+        background-color: colors.$color_5 !important;
+    }
 
-		.entry-header {
-			padding-top: 0 !important;
-		}
-	}
+    .no-results,
+    .not-found {
+        text-align: center;
 
-	.cat-links {
-		margin-top: 2em;
-		padding: 0 2em;
-		display: flex;
-		gap: .5em;
-		align-items: center;
+        .entry-header {
+            padding-top: 0 !important;
+        }
+    }
 
-		a {
-			font-size: .85em;
-		}
-	}
+    .page-header {
+        .page-title {
+            margin: 0;
+            font-size: 1.6em;
+        }
 
-	.page-header {
-		.page-title {
-			margin: 0;
-			font-size: 1.6em;
-		}
+        .archive-description {
+            font-style: italic;
+            padding-top: 0.5em;
 
-		.archive-description {
-			font-style: italic;
-			padding-top: .5em;
+            p {
+                margin: 0;
+            }
+        }
+    }
 
-			p {
-				margin: 0;
-			}
-		}
-	}
+    .widget,
+    .not-found,
+    .page-header,
+    .comments-area {
+        padding: 2em;
+    }
 
+    .hentry,
+    .widget,
+    .not-found,
+    .page-header,
+    .comments-area {
+        background-color: #fff;
+        -ms-word-wrap: break-word;
+        word-wrap: break-word;
+        overflow: auto;
+        -webkit-box-shadow: variables.$shadow;
+        -moz-box-shadow: variables.$shadow;
+        box-shadow: variables.$shadow;
+        margin-bottom: 2em;
+        border-radius: 5px;
 
-	.widget,
-	.not-found,
-	.page-header,
-	.comments-area {
-		padding: 2em;
-	}
+        .entry-header {
+            padding: 2em 2em 0;
 
-	.hentry,
-	.widget,
-	.not-found,
-	.page-header,
-	.comments-area {
-		background-color: #fff;
-		-ms-word-wrap: break-word;
-		word-wrap: break-word;
-		overflow: auto;
-		-webkit-box-shadow: $shadow;
-		-moz-box-shadow: $shadow;
-		box-shadow: $shadow;
-		margin-bottom: 2em;
+            .breadcrumbs {
+                font-size: 0.85em;
+                padding-bottom: 1em;
+            }
 
-		.entry-header {
-			padding: 1.5em 2em 0;
+            .entry-title {
+                margin: 0;
+                font-size: 1.6em;
+            }
 
-			.breadcrumbs {
-				font-size: .85em;
-				padding-bottom: 1em;
-			}
+            .entry-meta {
+                font-size: 0.85em;
+                padding: 0.3em 0;
 
-			.entry-title {
-				margin: 0;
-				font-size: 1.6em;
-			}
+                a {
+                    text-decoration: none;
+                }
 
-			.entry-meta {
-				font-size: .85em;
-				padding: .3em 0;
+                a:hover {
+                    border-bottom: solid 1px;
+                }
 
-				a {
-					text-decoration: none;
-				}
+                .updated {
+                    display: none;
+                }
+            }
+        }
 
-				a:hover {
-					border-bottom: solid 1px;
-				}
+        .entry-content {
+            padding: 0 2em;
+            &::after {
+                content: "";
+                display: table;
+                clear: both;
+            }
+        }
 
-				.updated {
-					display: none;
-				}
-			}
-		}
+        .entry-footer {
+            padding: 0 2em;
+            margin: 2em 0;
+            display: flex;
+            flex: 1;
+            align-items: center;
+            gap: 0.5em;
 
-		.entry-content {
-			padding: 0 2em;
-			overflow: auto;
-		}
+            a {
+                font-size: 0.85em;
+            }
 
-		.entry-footer {
-			padding: 0 2em;
-			margin-bottom: 2em;
-			display: flex;
-			justify-content: flex-end;
-			align-items: center;
-			gap: .5em;
+            .tags-links {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
 
-			a {
-				font-size: .85em;
-			}
+                a {
+                    font-size: 0.85em;
+                    margin-left: 8px;
+                }
+            }
 
-			.tags-links {
-				flex: 1;
-				display: flex;
-				flex-wrap: wrap;
-				align-items: center;
-				gap: .5em;
-			}
+            .cat-links {
+                display: flex;
+                align-items: center;
 
-			.comments-link,
-			.edit-link {
-				display: flex;
-				align-items: center;
-				gap: 0.5em;
-				padding: 0.5em 1em;
-				background-color: $color_5;
-				color: $color_1;
-				border-radius: 50px;
+                a {
+                    font-size: 0.85em;
+                    margin-left: 8px;
+                }
+            }
 
-				a {
-					text-decoration: none;
-				}
+            .comments-link {
+                margin-left: auto;
+            }
 
-				&:hover {
-					background-color: $color_1;
-					color: $color_5;
+            .comments-link,
+            .edit-link {
+                display: flex;
+                align-items: center;
+                gap: 0.5em;
+                padding: 0.5em 1em;
+                background-color: colors.$color_5;
+                color: colors.$color_1;
+                border-radius: 50px;
 
-					a {
-						color: $color_5;
-					}
-				}
-			}
-		}
+                a {
+                    text-decoration: none;
+                }
 
-	}
+                &:hover {
+                    background-color: colors.$color_1;
+                    color: colors.$color_5;
 
+                    a {
+                        color: colors.$color_5;
+                    }
+                }
+            }
+        }
+    }
 }
 
-@media screen and (max-width: $small_screen) {
-	.site-content {
-		.hentry {
-			.entry-footer {
-				flex-direction: column;
-				align-items: start;
-			}
-		}
-	}
+@media screen and (max-width: variables.$small_screen) {
+    .site-content {
+        .hentry {
+            .entry-footer {
+                flex-direction: column;
+                align-items: start;
+                .comments-link {
+                    margin-left: 0;
+                }
+            }
+        }
+    }
 }

@@ -9,6 +9,7 @@
  * @since DK 0.1
  */
 ?>
+</div><!-- .container -->
 </section><!-- #main .site-main -->
 <footer id="colophon" class="site-footer" role="contentinfo">
 	<div class="site-info">

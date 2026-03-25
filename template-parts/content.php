@@ -11,9 +11,6 @@
 
 	<?php dk_post_thumbnail(); ?>
 
-	<?php if ('post' === get_post_type()) {
-		dk_post_category();
-	} ?>
 	<header class="entry-header">
 		<?php
 		if (is_singular()) :
