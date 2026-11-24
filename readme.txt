@@ -1,12 +1,12 @@
 === DK ===
 
 Contributors: dhmskrn
-Tags: blog, right-sidebar, custom-header, custom-menu, custom-background, featured-images, sticky-post, threaded-comments, translation-ready
+Tags: blog, right-sidebar, custom-logo, custom-menu, custom-background, featured-images, sticky-post, threaded-comments, translation-ready
 Donate link: https://paypal.me/dhimaskirana
 Requires at least: 4.5
-Tested up to: 6.2
+Tested up to: 6.9
 Requires PHP: 7.4
-Stable tag: 1.0
+Stable tag: 1.2
 License: GNU General Public License v2 or later
 License URI: LICENSE
 
@@ -38,6 +38,13 @@ Alternatively,
 4. Click on Install and Activate.
 
 == Changelog ==
+
+1.2 (November 24, 2026)
+- Added support for custom logo, block styles, wide alignments, and responsive embeds
+- Removed Dashicons dependency on the frontend and replaced icons with inline SVG and CSS
+- Fixed single post breadcrumb title and updated markup to semantic HTML5
+- Fixed skip-to-content link target
+- Improved responsive layout on mobile comment forms and sticky post styling
 
 1.1 (March 25, 2026)
 - Change the container to 900px to make the content more focused

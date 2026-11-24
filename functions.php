@@ -9,7 +9,7 @@
 
 if (!defined('DK_VERSION')) {
 	// Replace the version number of the theme on each release.
-	define('DK_VERSION', '1.0');
+	define('DK_VERSION', '1.2');
 }
 
 if (!function_exists('dk_setup')) :
@@ -64,31 +64,46 @@ if (!function_exists('dk_setup')) :
 
 		// Enable support for Custom Background.
 		add_theme_support('custom-background', array(
-			'default-color' => 'eff4f8'
+			'default-color' => 'eff4f8',
 		));
+
+		// Enable support for Custom Logo.
+		add_theme_support('custom-logo', array(
+			'height'      => 80,
+			'width'       => 240,
+			'flex-height' => true,
+			'flex-width'  => true,
+		));
+
+		// Add support for core block visual styles, wide alignments, and responsive embeds.
+		add_theme_support('wp-block-styles');
+		add_theme_support('align-wide');
+		add_theme_support('responsive-embeds');
 	}
 endif; // dk_setup
 add_action('after_setup_theme', 'dk_setup');
 
-//Register widgetized area and update sidebar with default widgets
+/**
+ * Register widgetized area and update sidebar with default widgets.
+ */
 function dk_widgets_init() {
-	register_sidebar([
-		'name' => __('Sidebar', 'dk'),
-		'id' => 'sidebar',
-		'description' => 'Appears as the default sidebar.',
+	register_sidebar(array(
+		'name'          => esc_html__('Sidebar', 'dk'),
+		'id'            => 'sidebar',
+		'description'   => esc_html__('Appears as the default sidebar.', 'dk'),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget' => '</aside>',
-		'before_title' => '<h2 class="widget-title">',
-		'after_title' => '</h2>',
-	]);
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	));
 }
 add_action('widgets_init', 'dk_widgets_init');
 
 /**
- * Enqueue scripts and styles
+ * Enqueue scripts and styles.
  */
 function dk_scripts() {
-	wp_enqueue_style('dk-style', get_template_directory_uri() . '/assets/style.css', array('dashicons'), DK_VERSION);
+	wp_enqueue_style('dk-style', get_template_directory_uri() . '/assets/style.css', array(), DK_VERSION);
 	wp_enqueue_script('dk-navigation', get_template_directory_uri() . '/assets/navigation.js', array(), DK_VERSION, true);
 
 	if (is_singular() && comments_open() && get_option('thread_comments')) {
@@ -100,9 +115,9 @@ add_action('wp_enqueue_scripts', 'dk_scripts');
 /**
  * Custom template tags for this theme.
  */
-require(get_template_directory() . '/inc/template-tags.php');
+require get_template_directory() . '/inc/template-tags.php';
 
 /**
- * Customizer additions
+ * Customizer additions.
  */
-require(get_template_directory() . '/inc/customizer.php');
+require get_template_directory() . '/inc/customizer.php';

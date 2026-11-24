@@ -24,7 +24,7 @@
 	<?php wp_body_open(); ?>
 	<div id="page" class="site">
 
-		<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e('Skip to content', 'dk'); ?></a>
+		<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e('Skip to content', 'dk'); ?></a>
 
 		<header id="masthead" class="site-header">
 			<div class="container">
@@ -48,7 +48,15 @@
 					<?php endif; ?>
 				</div><!-- .site-branding -->
 
-				<button class="menu-toggle" id="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><span class="dashicons dashicons-menu"></span></button>
+				<button class="menu-toggle" id="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+					<span class="screen-reader-text"><?php esc_html_e('Primary Menu', 'dk'); ?></span>
+					<svg class="icon-menu" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" aria-hidden="true" viewBox="0 0 16 16">
+						<path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+					</svg>
+					<svg class="icon-close" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" aria-hidden="true" viewBox="0 0 16 16">
+						<path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
+					</svg>
+				</button>
 
 				<nav id="site-navigation" class="main-navigation">
 					<?php wp_nav_menu(array('theme_location' => 'primary')); ?>

@@ -13,7 +13,7 @@
     }
 
     .sticky {
-        border: solid 1em colors.$color_1;
+        border-left: 4px solid colors.$color_2;
         background-color: colors.$color_5 !important;
     }
 
@@ -55,9 +55,7 @@
     .page-header,
     .comments-area {
         background-color: #fff;
-        -ms-word-wrap: break-word;
-        word-wrap: break-word;
-        overflow: auto;
+        overflow-wrap: break-word;
         -webkit-box-shadow: variables.$shadow;
         -moz-box-shadow: variables.$shadow;
         box-shadow: variables.$shadow;
@@ -97,6 +95,7 @@
 
         .entry-content {
             padding: 0 2em;
+
             &::after {
                 content: "";
                 display: table;
@@ -174,6 +173,7 @@
             .entry-footer {
                 flex-direction: column;
                 align-items: start;
+
                 .comments-link {
                     margin-left: 0;
                 }

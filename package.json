@@ -1,6 +1,6 @@
 {
     "name": "dk",
-    "version": "1.1",
+    "version": "1.2",
     "description": "Themes WordPress simple. This themes fully responsive,  that looks great on any device. Suitable for you who wants focused on the content. Full of CSS3 Transition. Hope you will enjoy with this theme.",
     "scripts": {
       "dev": "sass --watch ./sass/style.scss ./assets/style.css",

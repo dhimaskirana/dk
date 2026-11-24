@@ -4,6 +4,7 @@
 .nav-links {
     display: flex;
     justify-content: space-between;
+    gap: 1em;
 
     a {
         text-decoration: none;
@@ -13,22 +14,23 @@
 
     .nav-previous {
         flex: 1 0 50%;
-        a:before {
-            font-family: "Dashicons";
-            content: "\f340";
-            padding-right: 5px;
+
+        a::before {
+            content: "\2190";
+            padding-right: 6px;
         }
     }
 
     .nav-next {
         text-align: end;
         flex: 1 0 50%;
+
         a {
             justify-content: end;
-            &:after {
-                font-family: "Dashicons";
-                content: "\f344";
-                padding-left: 5px;
+
+            &::after {
+                content: "\2192";
+                padding-left: 6px;
             }
         }
     }
